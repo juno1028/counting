@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>입력받은 텍스트는</h1>
+    <div style="width:500px; height:200px; border:tomato solid 2px;">
+        <h2>{{ text }}</h2>
+    </div>
+    <h3>여백 포함 총 글자 수는 "{{ textcount }}"글자</h3>
+    <h3>여백 제외 총 글자 수는 "{{ text2count }}”글자</h3>
+    <a href="{% url 'home' %}">다시하기</a>
+
+
+    <h1 style="color : rgb(55, 0, 128)">당신이 입력한 텍스트는 총 "{{ wordcounts }}" 단어입니다.</h1>
+    <h3 style="color : rgb(55, 0, 128)">단어카운트</h3>
+    <div>
+        {% for i in result %}
+        {{i}}
+        <br>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>
